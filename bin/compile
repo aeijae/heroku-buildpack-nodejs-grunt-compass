@@ -148,7 +148,7 @@ fi
 
 # install compass
 status "Installing Compass"
-export GEM_HOME=$build_dir/.gem/ruby/1.9.1
+export GEM_HOME=$build_dir/.gem/ruby/2.2.0
 PATH="$GEM_HOME/bin:$PATH"
 if test -d $cache_dir/ruby/.gem; then
   status "Restoring ruby gems directory from cache"
@@ -158,7 +158,7 @@ else
   HOME=$build_dir gem install compass --user-install --no-rdoc --no-ri
 fi
 
-# cache ruby gems compass
+# cache ruby gems
 rm -rf $cache_dir/ruby
 mkdir -p $cache_dir/ruby
 
