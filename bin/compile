@@ -150,13 +150,13 @@ fi
 status "Installing Sass"
 export GEM_HOME=$build_dir/.gem/ruby/2.2.1
 PATH="$GEM_HOME/bin:$PATH"
-HOME=$build_dir gem install sass --user-install --no-rdoc --no-ri
+HOME=$build_dir gem install sass
 
 # install compass
 status "Installing Compass"
 export GEM_HOME=$build_dir/.gem/ruby/2.2.1
 PATH="$GEM_HOME/bin:$PATH"
-HOME=$build_dir gem update compass --user-install --no-rdoc --no-ri
+HOME=$build_dir gem install compass
 
 # cache ruby gems
 rm -rf $cache_dir/ruby
